@@ -37,11 +37,12 @@
                 </UContainer>
             </template>
 
-            <template #bottom>
-                <UContainer class="flex items-center justify-between">
-                    <p class="text-muted text-sm">Copyright © 2025</p>
-                    <UColorModeButton/>
-                </UContainer>
+            <template #left>
+                <p class="text-muted text-sm">Copyright © 2025</p>
+            </template>
+
+            <template #right>
+                <UColorModeButton/>
             </template>
         </UFooter>
     </div>
