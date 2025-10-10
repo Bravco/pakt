@@ -22,6 +22,8 @@
             </UContainer>
         </UMain>
 
+        <USeparator/>
+
         <UFooter>
             <template #top>
                 <UContainer>

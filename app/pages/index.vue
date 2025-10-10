@@ -24,7 +24,7 @@
         </template>
     </UPageHero>
 
-    <UPageCTA id="waitlist" title="Join the waitlist" description="Get latest updates on pakt and be the first one to try it out!" variant="subtle">
+    <UPageCTA id="waitlist" class="my-24 sm:my-32 lg:my-40" title="Join the waitlist" description="Get latest updates on pakt and be the first one to try it out!" variant="subtle">
         <template #links>
             <UFormField name="email" size="lg">
                 <UInput type="email" placeholder="your@email.com"/>
@@ -37,16 +37,10 @@
 <script setup lang="ts">
     const links = ref([
         {
-            label: "Get started",
+            label: "Get started - for free",
             to: "/",
-            icon: "i-lucide-handshake"
-        },
-        {
-            label: "Learn More",
-            to: "/",
-            trailingIcon: "i-lucide-corner-right-down",
-            color: "neutral",
-            variant: "subtle"
+            icon: "i-lucide-handshake",
+            size: "lg"
         }
     ]);
 </script>
