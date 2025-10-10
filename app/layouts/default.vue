@@ -17,7 +17,9 @@
         </UHeader>
 
         <UMain>
-            <slot/>
+            <UContainer>
+                <slot/>
+            </UContainer>
         </UMain>
 
         <UFooter>
@@ -28,7 +30,7 @@
                             <UFormField name="email" label="Subscribe to our newsletter" description="Stay updated on new releases, features and discounts." size="lg">
                                 <UInput type="email" placeholder="your@email.com" class="w-full">
                                     <template #trailing>
-                                        <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
+                                        <UButton type="submit" size="xs" color="neutral" label="Subscribe" class="cursor-pointer"/>
                                     </template>
                                 </UInput>
                             </UFormField>
