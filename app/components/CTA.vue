@@ -1,6 +1,13 @@
 <template>
     <UPageSection id="waitlist">
-        <UPageCTA class="my-24 sm:my-32 lg:my-40" title="Join the waitlist" description="Get latest updates on pakt and be the first one to try it out!" variant="subtle">
+        <UPageCTA
+            description="Get latest updates on pakt and be the first one to try it out!"
+            variant="subtle"
+        >
+            <template #title>
+                <div class="mb-3 text-base text-secondary font-semibold">January 1st 2026</div>
+                Join the waitlist
+            </template>
             <template #links>
                 <UFormField name="email" size="lg">
                     <UInput type="email" placeholder="your@email.com"/>
