@@ -1,5 +1,10 @@
 <template>
-    <UPageSection id="faq" title="Frequently Asked Questions">
+    <UPageSection
+        id="faq"
+        headline="FAQ"
+        title="Frequently Asked Questions"
+        :ui="{ headline: 'text-secondary' }"
+    >
         <UAccordion
             :items="items"
             :ui="{

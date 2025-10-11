@@ -1,5 +1,11 @@
 <template>
-    <UPageSection id="features" title="Features" description="Stop searching for brand deals. Focus on the product while pakt finds brand deals for you.">
+    <UPageSection
+        id="features"
+        headline="Features"
+        title="Everything you need"
+        description="Stop searching for brand deals. Focus on the product while pakt finds brand deals for you."
+        :ui="{ headline: 'text-secondary' }"
+    >
         <UPageGrid>
             <UPageCard
                 v-for="(card, index) in cards"

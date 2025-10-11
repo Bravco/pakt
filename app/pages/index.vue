@@ -1,6 +1,8 @@
 <template>
     <Hero/>
-    <How/>
+    <HowItWorks/>
+    <ForBusinesses/>
+    <ForInfluencers/>
     <Features/>
     <Pricing/>
     <FAQ/>

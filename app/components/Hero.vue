@@ -20,7 +20,10 @@
             A sea of <span class="text-primary">opportunities</span>
         </template>
         <template #description>
-            <p>Connect with the perfect collaboration partners.<br>Build authentic relationships. Create campaigns that drive real results.</p>
+            <p>
+                Empowering brands and influencers to collaborate smarter, not harder.<br>
+                Find your perfect match, launch impactful campaigns, and make every partnership count.
+            </p>
         </template>
         <template #default>
             <Placeholder class="h-150"/>

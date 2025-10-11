@@ -1,6 +1,6 @@
 <template>
     <div>
-        <UHeader>
+        <UHeader :ui="{ body: 'h-full' }">
             <template #title>
                 <h1>pakt</h1>
             </template>
@@ -12,7 +12,14 @@
             </template>
 
             <template #body>
-                <UNavigationMenu :items="items" orientation="vertical" variant="link" class="-mx-2.5"/>
+                <div class="h-full flex flex-col justify-between">
+                    <UNavigationMenu :items="items" orientation="vertical" variant="link" class="-mx-2.5"/>
+                    <div class="flex gap-x-1.5 -ml-1.5">
+                        <UButton icon="i-lucide-instagram" variant="ghost" color="neutral" target="_blank" to="https://instagram.com"/>
+                        <UButton icon="i-lucide-twitter" variant="ghost" color="neutral" target="_blank" to="https://x.com"/>
+                        <UButton icon="i-lucide-linkedin" variant="ghost" color="neutral" target="_blank" to="https://linkedin.com"/>
+                    </div>
+                </div>
             </template>
         </UHeader>
 
@@ -44,6 +51,9 @@
             </template>
 
             <template #right>
+                <UButton icon="i-lucide-instagram" variant="ghost" color="neutral" target="_blank" to="https://instagram.com"/>
+                <UButton icon="i-lucide-twitter" variant="ghost" color="neutral" target="_blank" to="https://x.com"/>
+                <UButton icon="i-lucide-linkedin" variant="ghost" color="neutral" target="_blank" to="https://linkedin.com"/>
                 <UColorModeButton class="cursor-pointer"/>
             </template>
         </UFooter>
@@ -61,7 +71,17 @@
         },
         {
             label: "Features",
-            to: "#features"
+            to: "#features",
+            children: [
+                {
+                    label: "For Businesses",
+                    to: "#for-businesses"
+                },
+                {
+                    label: "For Influencers",
+                    to: "#for-influencers"
+                }
+            ]
         },
         {
             label: "Pricing",

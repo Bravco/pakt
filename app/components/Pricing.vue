@@ -1,5 +1,10 @@
 <template>
-    <UPageSection id="pricing" title="Pricing">
+    <UPageSection
+        id="pricing"
+        headline="$$$"
+        title="Pricing Plans"
+        :ui="{ headline: 'text-secondary' }"
+    >
         <template #body>
             <div class="flex flex-col items-center gap-8">
                 <USwitch

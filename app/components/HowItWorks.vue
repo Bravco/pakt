@@ -1,5 +1,11 @@
 <template>
-    <UPageSection id="how-it-works" title="How it works" description="You can close a brand deal within 3 easy steps.">
+    <UPageSection
+        id="how-it-works"
+        headline="3 easy steps"
+        title="How it works"
+        description="Connect, chat, and collaborate — we make brand partnerships fast and frictionless."
+        :ui="{ headline: 'text-secondary' }"
+    >
         <UPageGrid>
             <UPageCard
                 v-for="(card, index) in cards"
