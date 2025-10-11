@@ -1,0 +1,42 @@
+<template>
+    <UPageHero :links="links">
+        <template #headline>
+            <UBadge
+                label="New"
+                variant="soft"
+                color="secondary"
+            />
+            <UButton
+                label="Announcing on January 1st 2026"
+                trailing-icon="i-lucide-arrow-right"
+                size="md"
+                variant="link"
+                color="neutral"
+                class="underline underline-offset-2 cursor-pointer"
+                :to="{ path: '/', hash: '#waitlist' }"
+            />
+        </template>
+        <template #title>
+            A sea of <span class="text-primary">opportunities</span>
+        </template>
+        <template #description>
+            <p>Connect with the perfect collaboration partners.<br>Build authentic relationships. Create campaigns that drive real results.</p>
+        </template>
+        <template #bottom>
+            <Placeholder class="h-150"/>
+        </template>
+    </UPageHero>
+</template>
+
+<script setup lang="ts">
+    import type { ButtonProps } from "@nuxt/ui";
+
+    const links = ref<ButtonProps[]>([
+        {
+            label: "Get started - for free",
+            to: "/",
+            icon: "i-lucide-handshake",
+            size: "lg"
+        }
+    ]);
+</script>

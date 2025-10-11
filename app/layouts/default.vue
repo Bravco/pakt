@@ -8,7 +8,7 @@
             <UNavigationMenu :items="items" variant="link"/>
 
             <template #right>
-                <UButton label="Sign in"/>
+                <UButton label="Sign in" to="#waitlist"/>
             </template>
 
             <template #body>
@@ -46,7 +46,7 @@
             </template>
 
             <template #right>
-                <UColorModeButton/>
+                <UColorModeButton class="cursor-pointer"/>
             </template>
         </UFooter>
     </div>
@@ -56,28 +56,22 @@
     import type { NavigationMenuItem } from "@nuxt/ui";
     import type { FooterColumn } from "@nuxt/ui";
 
-    const route = useRoute();
-
     const items = ref<NavigationMenuItem[]>([
         {
-            label: "Home",
-            to: "/",
-            active: route.path === "/" && route.hash === ""
+            label: "How it works",
+            to: "#how"
         },
         {
             label: "Features",
-            to: { path: "/", hash: "#features" },
-            active: route.path === "/features" && route.hash === "#features"
+            to: "#features"
         },
         {
             label: "Pricing",
-            to: { path: "/", hash: "#pricing" },
-            active: route.path === "/pricing" && route.hash === "#pricing"
+            to: "#pricing",
         },
         {
             label: "FAQ",
-            to: { path: "/", hash: "#faq" },
-            active: route.path === "/" && route.hash === "#faq"
+            to: "#faq"
         }
     ]);
 
@@ -86,24 +80,33 @@
             label: "Navigation",
             children: [
                 {
-                    label: "Home",
-                    to: "/",
-                    active: false
+                    label: "How it works",
+                    to: "#how"
                 },
                 {
                     label: "Features",
-                    to: { path: "/", hash: "#features" },
-                    active: false
+                    to: "#features"
                 },
                 {
                     label: "Pricing",
-                    to: { path: "/", hash: "#pricing" },
-                    active: false
+                    to: "#pricing",
                 },
                 {
                     label: "FAQ",
-                    to: { path: "/", hash: "#faq" },
-                    active: false
+                    to: "#faq"
+                }
+            ]
+        },
+        {
+            label: "Legal",
+            children: [
+                {
+                    label: "Terms of Service",
+                    to: ""
+                },
+                {
+                    label: "Privacy Policy",
+                    to: ""
                 }
             ]
         },
