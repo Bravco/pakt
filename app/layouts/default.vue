@@ -57,7 +57,7 @@
     const items = ref<NavigationMenuItem[]>([
         {
             label: "How it works",
-            to: "#how"
+            to: "#how-it-works"
         },
         {
             label: "Features",
@@ -79,7 +79,7 @@
             children: [
                 {
                     label: "How it works",
-                    to: "#how"
+                    to: "#how-it-works"
                 },
                 {
                     label: "Features",
