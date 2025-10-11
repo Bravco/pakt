@@ -22,7 +22,7 @@
         <template #description>
             <p>Connect with the perfect collaboration partners.<br>Build authentic relationships. Create campaigns that drive real results.</p>
         </template>
-        <template #bottom>
+        <template #default>
             <Placeholder class="h-150"/>
         </template>
     </UPageHero>
@@ -35,7 +35,7 @@
         {
             label: "Get started - for free",
             to: "/",
-            icon: "i-lucide-handshake",
+            trailingIcon: "i-lucide-arrow-right",
             size: "lg"
         }
     ]);

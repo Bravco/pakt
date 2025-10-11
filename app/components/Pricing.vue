@@ -1,20 +1,23 @@
 <template>
     <UPageSection id="pricing" title="Pricing">
-        <div class="flex flex-col items-center gap-8">
-            <USwitch
-                v-model="billedAnnualy"
-                label="Billed Annualy"
-                description="Save -20%"
-                size="lg"
-            />
-            <UPricingPlans class="w-full">
-                <UPricingPlan
-                    v-for="(plan, index) in plans"
-                    :key="index"
-                    v-bind="plan"
+        <template #body>
+            <div class="flex flex-col items-center gap-8">
+                <USwitch
+                    v-model="billedAnnualy"
+                    label="Billed Annualy"
+                    description="Save -20%"
+                    size="lg"
                 />
-            </UPricingPlans>
-        </div>
+                <UPricingPlans class="w-full">
+                    <UPricingPlan
+                        v-for="(plan, index) in plans"
+                        :key="index"
+                        v-bind="plan"
+                        variant="subtle"
+                    />
+                </UPricingPlans>
+            </div>
+        </template>
     </UPageSection>
 </template>
 
@@ -44,8 +47,10 @@
             ],
             button: {
                 label: "Get started",
-                color: "neutral"
-            }
+                color: "neutral",
+                to: "/"
+            },
+            ui: { featureIcon: "text-secondary" }
         },
         {
             title: "Premium",
@@ -65,7 +70,8 @@
                 "Smart Matching"
             ],
             button: {
-                label: "Upgrade now"
+                label: "Upgrade now",
+                to: "/"
             },
             highlight: true
         }
